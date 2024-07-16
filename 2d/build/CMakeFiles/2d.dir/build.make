@@ -84,14 +84,31 @@ CMakeFiles/2d.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2d.dir/src/main.cpp.s"
 	D:/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:/Study/PhysicsEngine/2d/src/main.cpp -o CMakeFiles/2d.dir/src/main.cpp.s
 
+CMakeFiles/2d.dir/src/physics_engine.cpp.obj: CMakeFiles/2d.dir/flags.make
+CMakeFiles/2d.dir/src/physics_engine.cpp.obj: CMakeFiles/2d.dir/includes_CXX.rsp
+CMakeFiles/2d.dir/src/physics_engine.cpp.obj: E:/Study/PhysicsEngine/2d/src/physics_engine.cpp
+CMakeFiles/2d.dir/src/physics_engine.cpp.obj: CMakeFiles/2d.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:/Study/PhysicsEngine/2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/2d.dir/src/physics_engine.cpp.obj"
+	D:/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/2d.dir/src/physics_engine.cpp.obj -MF CMakeFiles/2d.dir/src/physics_engine.cpp.obj.d -o CMakeFiles/2d.dir/src/physics_engine.cpp.obj -c E:/Study/PhysicsEngine/2d/src/physics_engine.cpp
+
+CMakeFiles/2d.dir/src/physics_engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2d.dir/src/physics_engine.cpp.i"
+	D:/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:/Study/PhysicsEngine/2d/src/physics_engine.cpp > CMakeFiles/2d.dir/src/physics_engine.cpp.i
+
+CMakeFiles/2d.dir/src/physics_engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2d.dir/src/physics_engine.cpp.s"
+	D:/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:/Study/PhysicsEngine/2d/src/physics_engine.cpp -o CMakeFiles/2d.dir/src/physics_engine.cpp.s
+
 # Object files for target 2d
 2d_OBJECTS = \
-"CMakeFiles/2d.dir/src/main.cpp.obj"
+"CMakeFiles/2d.dir/src/main.cpp.obj" \
+"CMakeFiles/2d.dir/src/physics_engine.cpp.obj"
 
 # External object files for target 2d
 2d_EXTERNAL_OBJECTS =
 
 2d.exe: CMakeFiles/2d.dir/src/main.cpp.obj
+2d.exe: CMakeFiles/2d.dir/src/physics_engine.cpp.obj
 2d.exe: CMakeFiles/2d.dir/build.make
 2d.exe: D:/SFML/lib/libsfml-graphics-s-d.a
 2d.exe: D:/SFML/lib/libsfml-window-s-d.a
@@ -99,7 +116,7 @@ CMakeFiles/2d.dir/src/main.cpp.s: cmake_force
 2d.exe: D:/SFML/lib/libfreetype.a
 2d.exe: CMakeFiles/2d.dir/linkLibs.rsp
 2d.exe: CMakeFiles/2d.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:/Study/PhysicsEngine/2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable 2d.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:/Study/PhysicsEngine/2d/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable 2d.exe"
 	D:/CMake/bin/cmake.exe -E rm -f CMakeFiles/2d.dir/objects.a
 	D:/mingw64/bin/ar.exe qc CMakeFiles/2d.dir/objects.a @CMakeFiles/2d.dir/objects1.rsp
 	D:/mingw64/bin/c++.exe -g -Wl,--whole-archive CMakeFiles/2d.dir/objects.a -Wl,--no-whole-archive -o 2d.exe -Wl,--out-implib,lib2d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/2d.dir/linkLibs.rsp

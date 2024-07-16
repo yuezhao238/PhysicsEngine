@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/Study/PhysicsEngine/2d/src/main.cpp" "CMakeFiles/2d.dir/src/main.cpp.obj" "gcc" "CMakeFiles/2d.dir/src/main.cpp.obj.d"
+  "E:/Study/PhysicsEngine/2d/src/physics_engine.cpp" "CMakeFiles/2d.dir/src/physics_engine.cpp.obj" "gcc" "CMakeFiles/2d.dir/src/physics_engine.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

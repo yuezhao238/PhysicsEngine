@@ -2,19 +2,17 @@
 #include <SFML/Graphics.hpp>
 #include "physics_engine.h"
 
+
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "2D Physics Engine");
 
     PhysicsEngine engine;
 
-    RigidBody body1({100, 100}, 1);
-    RigidBody body2({200, 100}, 1);
+    RigidBody body1({200, 200}, 999999999, {0, 0});
+    RigidBody body2({300, 200}, 0.00001, {0, 1});
 
     engine.addRigidBody(&body1);
     engine.addRigidBody(&body2);
-
-    body1.applyForce({10000, 0});
-    body2.applyForce({-10000, 0});
 
     sf::Clock clock;
     
@@ -26,9 +24,14 @@ int main() {
             }
         }
 
-        float dt = clock.restart().asSeconds();
+        // float dt = clock.restart().asSeconds();
+        float dt = 0.1;
+        
+        // sf::sleep(sf::seconds(0.2));
 
         engine.update(dt);
+        std::cout << "Body1: " << body1.position.x << ", " << body1.position.y << std::endl;
+        std::cout << "Body2: " << body2.position.x << ", " << body2.position.y << std::endl;
 
         window.clear();
         engine.render(window);

@@ -2,6 +2,7 @@
 #define PHYSICS_ENGINE_H
 
 #include <vector>
+#include <cmath>
 #include <SFML/Graphics.hpp>
 
 struct Vector2 {
@@ -20,6 +21,10 @@ struct Vector2 {
 
     Vector2 operator/(float scalar) const {
         return {x / scalar, y / scalar};
+    }
+
+    float lengthSquare() const {
+        return std::sqrt(x * x + y * y);
     }
 };
 
@@ -40,7 +45,7 @@ public:
     float mass;
     sf::CircleShape shape;
 
-    RigidBody(Vector2 pos, float m) : position(pos), mass(m), velocity({0, 0}), force({0, 0}) {
+    RigidBody(Vector2 pos, float m, Vector2 vel) : position(pos), mass(m), velocity(vel), force({0, 0}) {
         shape.setRadius(10);
         shape.setOrigin(10, 10);
         shape.setPosition(pos.x, pos.y);
@@ -60,7 +65,8 @@ public:
     }
 
     AABB getAABB() const {
-        return {{position.x - shape.getRadius(), position.y - shape.getRadius()}, {position.x + shape.getRadius(), position.y + shape.getRadius()}};
+        float radius = shape.getRadius();
+        return {{position.x - radius, position.y - radius}, {position.x + radius, position.y + radius}};
     }
 
     void resolveCollision(RigidBody& other) {
@@ -72,13 +78,18 @@ public:
 class PhysicsEngine {
 public:
     std::vector<RigidBody*> bodies;
+    Vector2 universalGravity(RigidBody* body1, RigidBody* body2);
+    Vector2 allUniversalGravity(RigidBody* body);
 
     void addRigidBody(RigidBody* body) {
         bodies.push_back(body);
     }
 
     void update(float dt) {
+        
+
         for (RigidBody* body : bodies) {
+            body->applyForce(allUniversalGravity(body));
             body->integrate(dt);
         }
 
@@ -96,6 +107,8 @@ public:
             window.draw(body->shape);
         }
     }
+
+
 
 };
 
