@@ -1,0 +1,10 @@
+^E:\STUDY\PHYSICSENGINE\SFML_TEST\BUILD\CMAKEFILES\8629ED94C63124B1A4781883A544B11D\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe -SE:/Study/PhysicsEngine/sfml_test -BE:/Study/PhysicsEngine/sfml_test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Study/PhysicsEngine/sfml_test/build/sfml_test.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
