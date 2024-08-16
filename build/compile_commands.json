@@ -1,0 +1,14 @@
+[
+{
+  "directory": "E:/Study/PhysicsEngine/build",
+  "command": "D:\\mingw64\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/2d.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\2d.dir\\src\\main.cpp.obj -c E:\\Study\\PhysicsEngine\\2d\\src\\main.cpp",
+  "file": "E:/Study/PhysicsEngine/2d/src/main.cpp",
+  "output": "CMakeFiles/2d.dir/src/main.cpp.obj"
+},
+{
+  "directory": "E:/Study/PhysicsEngine/build",
+  "command": "D:\\mingw64\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/2d.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\2d.dir\\src\\physics_engine.cpp.obj -c E:\\Study\\PhysicsEngine\\2d\\src\\physics_engine.cpp",
+  "file": "E:/Study/PhysicsEngine/2d/src/physics_engine.cpp",
+  "output": "CMakeFiles/2d.dir/src/physics_engine.cpp.obj"
+}
+]

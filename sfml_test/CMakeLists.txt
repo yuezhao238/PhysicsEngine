@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SFML_DIR "D:/SFML/lib/cmake/SFML")
 
-find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
+find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
 include_directories(${SFML_INCLUDE_DIR})
 
